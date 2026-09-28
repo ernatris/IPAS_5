@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rangkuman Materi dan Kuis Interaktif IPAS Kelas 5</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="s-cover">
+    <div class="cover">
+      <div class="badge">📚 RANGKUMAN MATERI &amp; KUIS INTERAKTIF</div>
+      <h1>IPAS Kelas 5 🌏</h1>
+      <p>Ilmu Pengetahuan Alam dan Sosial · SD/MI</p>
+      <div class="credit">Disusun oleh <b>Erna Trisnawati, S.Pd.I</b></div>
+    </div>
+    <div class="card form">
+      <h3>Halo, Teman Hebat! 👋</h3>
+      <label>Nama Lengkap</label><input id="nama" placeholder="Tulis namamu">
+      <label>Asal Sekolah</label><input id="sekolah" placeholder="Contoh: SDN 3 Cileuleuy">
+      <div class="err" id="err">Nama dan asal sekolah wajib diisi ya!</div>
+      <button class="btn" onclick="startApp()">Mulai Belajar 🚀</button>
+    </div>
+  </div>
+
+  <div id="s-home" class="hide">
+    <div class="top"><div>Hai, <b id="h-nama"></b> 🎒<br><small id="h-sek"></small></div><div class="pill" id="h-prog"></div></div>
+    <h2 class="ttl">Pilih Bab</h2>
+    <button class="rank-bar" onclick="openRank()">🏆 Lihat Peringkat Global</button>
+    <div class="list" id="list"></div>
+    <div class="foot">Buku Siswa IPAS Kelas V (Edisi Revisi) · Erna Trisnawati, S.Pd.I</div>
+  </div>
+
+  <div id="s-topic" class="hide">
+    <div class="thead" id="thead"><button class="back" onclick="toHome()">← Kembali</button><h2 id="t-title"></h2><p id="t-sub"></p></div>
+    <div class="pad">
+      <div class="tabs"><button class="tab active" id="tb-m" onclick="showTab('m')">📖 Materi</button><button class="tab" id="tb-k" onclick="showTab('k')">✏️ Kuis (20 soal)</button></div>
+      <div class="panel materi" id="p-m"></div>
+      <div class="panel hide" id="p-k"></div>
+    </div>
+  </div>
+
+  <div id="s-rank" class="hide">
+    <div class="thead" style="background:linear-gradient(160deg,#f59e0b,#fb923c)"><button class="back" onclick="toHome()">← Kembali</button><h2>🏆 Peringkat Global</h2><p>Total nilai terbaik semua bab</p></div>
+    <div class="pad"><div class="panel" id="rank-body">Memuat...</div></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
